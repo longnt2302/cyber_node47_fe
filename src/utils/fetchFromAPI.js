@@ -115,7 +115,7 @@ export const loginFacebookAPI = async (payload) => {
 export const forgotPassAPI = async (payload) => {
   try {
     // payload: email
-    let { data } = await axios.post(`${BASE_URL}/auth/forgot-pass`, payload);
+    let { data } = await axios.post(`${BASE_URL}/auth/forgot-password`, payload);
     return data;
   } catch (error) {
     throw error;
@@ -125,7 +125,7 @@ export const forgotPassAPI = async (payload) => {
 export const changePassAPI = async (payload) => {
   try {
     // payload: email, code, newPass
-    let { data } = await axios.post(`${BASE_URL}/auth/change-pass`, payload);
+    let { data } = await axios.post(`${BASE_URL}/auth/change-password`, payload);
     return data;
   } catch (error) {
     throw error;
